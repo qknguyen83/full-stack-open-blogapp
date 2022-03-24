@@ -3,7 +3,7 @@ name: Hello
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   hello:
