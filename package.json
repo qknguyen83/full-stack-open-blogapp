@@ -1,0 +1,64 @@
+{
+  "name": "full-stack-open-blogapp",
+  "version": "1.0.0",
+  "description": "This repository is used for the CI/CD module exercises 11.20 11.21 of the Full stack open course",
+  "main": "index.js",
+  "scripts": {
+    "start:prod": "cross-env NODE_ENV=production node index.js",
+    "start:test": "cross-env NODE_ENV=test node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:e2e": "cypress open",
+    "eslint": "eslint . --ext .js,.jsx",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qknguyen83/full-stack-open-blogapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qknguyen83/full-stack-open-blogapp/issues"
+  },
+  "homepage": "https://github.com/qknguyen83/full-stack-open-blogapp#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.8",
+    "mongoose-unique-validator": "^3.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.5.1",
+    "babel-loader": "^8.2.4",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "cypress": "^9.5.2",
+    "eslint": "^8.11.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-jest": "^26.1.2",
+    "eslint-plugin-react": "^7.29.4",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "style-loader": "^3.3.1",
+    "supertest": "^6.2.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
