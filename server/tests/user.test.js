@@ -6,7 +6,7 @@ const api = supertest(app);
 
 beforeAll((done) => {
   mongoose.connection.db ? done() : mongoose.connection.on('connected', done);
-});
+}, 10000);
 
 beforeEach(async () => {
   await api.post('/api/testing/reset');
