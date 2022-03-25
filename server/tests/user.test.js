@@ -4,6 +4,10 @@ const app = require('../index');
 
 const api = supertest(app);
 
+beforeAll((done) => {
+  mongoose.connection.db ? done() : mongoose.connection.on('connected', done);
+});
+
 beforeEach(async () => {
   await api.post('/api/testing/reset');
 });

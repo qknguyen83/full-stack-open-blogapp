@@ -4,8 +4,11 @@ const app = require('../index');
 
 const api = supertest(app);
 
+beforeAll((done) => {
+  mongoose.connection.db ? done() : mongoose.connection.on('connected', done);
+});
+
 beforeEach(async () => {
-  jest.setTimeout(10000);
   await api.post('/api/testing/reset');
 });
 
