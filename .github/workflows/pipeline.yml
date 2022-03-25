@@ -21,8 +21,6 @@ jobs:
           envkey_MONGODB_URI: ${{ secrets.MONGODB_URI }}
           envkey_TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
           envkey_SECRET: ${{ secrets.SECRET }}
-      - name: directory content
-        run: ls -l
       - name: lint
         run: npm run eslint
       - name: build

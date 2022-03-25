@@ -8,7 +8,7 @@
     "start:test": "cross-env NODE_ENV=test node index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.js",
     "test": "cross-env NODE_ENV=test jest",
-    "test:e2e": "cypress open",
+    "test:e2e": "cypress run",
     "eslint": "eslint . --ext .js,.jsx",
     "build": "webpack --mode production"
   },
